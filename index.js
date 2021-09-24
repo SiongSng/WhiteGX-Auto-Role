@@ -36,7 +36,7 @@ client.once('ready', () => {
     console.log(client.user.username + ' 準備完成!');
     console.log("本腳本將會於每天的凌晨一點至凌晨四點開放頻道給身分組\"太白粉\"瀏覽權限，其餘時間將關閉瀏覽權限");
 
-    if (new Date().getHours() != 4) {
+    if (new Date().getHours() != 4) { //如果不是凌晨四點
         const RoleChannl = client.channels.cache.get('890664639099187230'); // 身分組領取的頻道
         RoleChannl.permissionOverwrites.edit(RoleID, { VIEW_CHANNEL: false }); //關閉頻道權限
     }
